@@ -158,21 +158,6 @@ body{
   display: none; 
 }
 
-/* .nav{
-  background: #c9ada7;
-  min-height: 5vh;
-  width: 100%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav a{
-  font-size: 16px;
-  font-family: MontSemiBold;
-} */
-
 .container{
   overflow: auto;
   max-height: 94vh;
@@ -297,8 +282,6 @@ button.accordion > *:nth-child(12) {
       grid-row-start: 1;
   -ms-grid-row-span: 4;
   grid-row-end: 5;
-  /* justify-self: center; */
-  /* align-self: center; */
 }
 
 .drinkname{
@@ -346,18 +329,12 @@ button.accordion > *:nth-child(12) {
 
 .ingredients{
   padding: 5%;
-  /* padding-left: 2%; */
-  /* text-align:center; */
   -ms-grid-column-align: start;
       justify-self: start;
   -ms-grid-row-align: center;
       align-self: center;
   display: -ms-grid;
   display: grid;
-  /* grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row-start: 2;
-  grid-row-end: 4; */
 }
 
 .price{
