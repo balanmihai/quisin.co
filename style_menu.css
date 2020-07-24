@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 *,*::before,*::after{
   margin:0;
   padding: 0;
@@ -259,7 +252,7 @@ button.accordion > *:nth-child(12) {
 }
 
 .accordion h1{
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 
@@ -335,7 +328,7 @@ button.accordion > *:nth-child(12) {
   padding-right: 5%;
   display: -ms-grid;
   display: grid;
-  width: 60%;
+  width: 45px;
   height: auto;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
@@ -414,4 +407,21 @@ button.accordion > *:nth-child(12) {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+@media (max-height: 700px){
+
+  .accordion h3{
+    font-size: 1rem;
+    font-style: italic;
+  }
+  
+  .accordion h1{
+    font-size: 1rem;
+  }
+
+  .plus{
+    width: 20px;
+  }
+
 }
