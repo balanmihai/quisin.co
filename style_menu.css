@@ -257,7 +257,7 @@ button.accordion > *:nth-child(12) {
 
 
 .image{
-  width: 100%;
+  width: 20px;
   height: auto;
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
