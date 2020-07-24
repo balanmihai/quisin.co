@@ -1,7 +1,15 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 *,*::before,*::after{
   margin:0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html{
@@ -39,15 +47,44 @@ body{
 }
 
 .menu{
+  -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.menu > *:nth-child(1){
+  -ms-grid-row:1;
+  -ms-grid-column:1;
+}
+
+.menu > *:nth-child(2){
+  -ms-grid-row:2;
+  -ms-grid-column:1;
+}
+
+.menu > *:nth-child(3){
+  -ms-grid-row:3;
+  -ms-grid-column:1;
+}
+
+.menu > *:nth-child(4){
+  -ms-grid-row:4;
+  -ms-grid-column:1;
+}
+
+.menu > *:nth-child(5){
+  -ms-grid-row:5;
+  -ms-grid-column:1;
 }
 
 .header{
   top: 0;
+  display: -ms-grid;
   display: grid;
   position: absolute;  
-  box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.7);  
+          box-shadow: 0px 6px 8px 0px rgba(0,0,0,0.7);
   /* grid-column: 1/2;
   grid-row: 2/3; */
   width: 100%;
@@ -65,9 +102,15 @@ body{
   max-height: 4vh;
   width: 100%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #f2e9e4;
   background-color: #22223b ;
 }
@@ -80,9 +123,15 @@ body{
   min-height: 6vh;
   width: 100%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .scroll {
@@ -118,9 +167,15 @@ body{
   min-height: 5vh;
   width: 100%;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav a{
@@ -135,6 +190,7 @@ body{
 }
 
 .cocktails, .shots{
+  display: -ms-grid;
   display: grid;
   grid-gap: 0.5%;
   padding-bottom: 9vh;
@@ -147,21 +203,88 @@ button.accordion {
   border: none;
   outline: none;
   cursor: pointer;
+  -webkit-transition: background-color 0.2s linear;
+  -o-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
   overflow: auto;
   background: #f2e9e4;
+  display: -ms-grid;
   display: grid;
   max-height: 40vh;
   min-height: 20vh;
   margin: auto;
+  -ms-grid-columns: 40% 40% 20%;
   grid-template-columns: 40% 40% 20%;
+  -ms-grid-rows: 28% 28% 16% 28%;
   grid-template-rows: 28% 28% 16% 28%;
+}
+
+button.accordion > *:nth-child(1) {
+  -ms-grid-row:1;
+  -ms-grid-column:1;
+}
+
+button.accordion > *:nth-child(2) {
+  -ms-grid-row:1;
+  -ms-grid-column:2;
+}
+
+button.accordion > *:nth-child(3) {
+  -ms-grid-row:1;
+  -ms-grid-column:3;
+}
+
+button.accordion > *:nth-child(4) {
+  -ms-grid-row:2;
+  -ms-grid-column:1;
+}
+
+button.accordion > *:nth-child(5) {
+  -ms-grid-row:2;
+  -ms-grid-column:2;
+}
+
+button.accordion > *:nth-child(6) {
+  -ms-grid-row:2;
+  -ms-grid-column:3;
+}
+
+button.accordion > *:nth-child(7) {
+  -ms-grid-row:3;
+  -ms-grid-column:1;
+}
+
+button.accordion > *:nth-child(8) {
+  -ms-grid-row:3;
+  -ms-grid-column:2;
+}
+
+button.accordion > *:nth-child(9) {
+  -ms-grid-row:3;
+  -ms-grid-column:3;
+}
+
+button.accordion > *:nth-child(10) {
+  -ms-grid-row:4;
+  -ms-grid-column:1;
+}
+
+button.accordion > *:nth-child(11) {
+  -ms-grid-row:4;
+  -ms-grid-column:2;
+}
+
+button.accordion > *:nth-child(12) {
+  -ms-grid-row:4;
+  -ms-grid-column:3;
 }
 
 .accordion-content {
   background: #f2e9e4;
   max-height: 0;
   overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-in-out;
+  -o-transition: max-height 0.2s ease-in-out;
   transition: max-height 0.2s ease-in-out;
 }
 
@@ -178,17 +301,28 @@ button.accordion {
 .image{
   width: 100%;
   height: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
   grid-row: 1/5;
 }
 
 .drinkname{
   padding-left: 2%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   grid-row: 1/3;
-  justify-self: start;
-  align-self: center;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-grid-row-align: center;
+      align-self: center;
   text-align: left;
 }
 
@@ -199,51 +333,83 @@ button.accordion {
 
 .quantity{
   padding-left: 2%;
-  justify-self: start;
-  align-self: center;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
   grid-column: 2/3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
   grid-row: 4/5;
 }
 
 .ingredients{
   padding: 5%;
-  justify-self: start;
-  align-self: center;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .price{
   padding-right: 5%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
   grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
   grid-row: 1/2;
-  justify-self: end;
-  align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
 }
 
 .plus{
   padding-right: 5%;
+  display: -ms-grid;
   display: grid;
   width: 40px;
   height: auto;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
   grid-column: 3/4;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
   grid-row: 4/5;
-  justify-self: end;
-  align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .header, footer{
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .menu{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container{
-  flex: 1 1 auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
@@ -253,20 +419,26 @@ button.accordion {
   border-top-right-radius: 1em;
   bottom: 0;
   position: absolute;
+  display: -ms-grid;
   display: grid;
   min-height: 5vh;
   width: 100%;
   -webkit-box-shadow: 0px -6px 8px 0px rgba(0,0,0,0.7);
-  -moz-box-shadow: 0px -6px 8px 0px rgba(0,0,0,0.7);
   box-shadow: 0px -6px 8px 0px rgba(0,0,0,0.7);
 }
 
 .footercontent{
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0% 5% 0% 5%;
   overflow: hidden;
   background: #c9ada7;
@@ -275,6 +447,8 @@ button.accordion {
 
 .footercontent a {
   font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   color: #22223b;
   text-align: center;
@@ -287,11 +461,16 @@ button.accordion {
 }
 
 .right{
-  justify-self: center;
-  align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 .left{
-  justify-self: center;
-  align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
-
